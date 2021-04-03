@@ -17,7 +17,7 @@ sudo sed -i.bak "/^# deb .*partner/ s/^# //" /etc/apt/sources.list
 sudo apt update && sudo apt upgrade -y
 
 # Install MS Edge Browser
-./MSEdge.sh
+wget https://raw.githubusercontent.com/saaditory/scripts/master/microsoft-edge-dev.sh && ./microsoft-edge-dev.sh
 xdg-settings set default-web-browser microsoft-edge-dev.desktop
 
 # Install Essentials
