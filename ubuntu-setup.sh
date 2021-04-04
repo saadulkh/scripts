@@ -5,6 +5,7 @@
 gsettings set org.gnome.desktop.interface enable-hot-corners true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
+sudo sed -i.bak "/^#HandleLidSwitch=/ s/^#.*/HandleLidSwitch=lock/" /etc/systemd/logind.conf
 
 # Debloate System
 sudo apt purge gnome-characters gnome-font-viewer gnome-logs rhythmbox seahorse totem ubuntu-desktop yelp -y
