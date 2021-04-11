@@ -1,7 +1,7 @@
 # A shell script to setup Ubuntu after a fresh install.
 # Created by Saad Khan on April 01, 2021.
 
-# Configure Settings
+# Configure System Settings
 gsettings set org.gnome.desktop.interface enable-hot-corners true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
