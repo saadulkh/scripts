@@ -18,7 +18,7 @@ sudo sed -i.bak "/LC_/ s/=.*/=en_GB.UTF-8/" /etc/default/locale
 gsettings set org.gnome.system.locale region 'en_GB.UTF-8'
 
 # Debloate System
-sudo apt purge gnome-characters gnome-font-viewer gnome-logs rhythmbox seahorse totem ubuntu-desktop yelp -y
+sudo apt purge aisleriot gnome-characters gnome-font-viewer gnome-logs gnome-mahjongg gnome-mines gnome-sudoku gnome-todo remmina rhythmbox seahorse simple-scan totem transmission-common yelp -y
 sudo apt auto-remove -y
 
 # Enable Partner Repositories
