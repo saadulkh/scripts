@@ -7,6 +7,11 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
 sudo sed -i.bak "/^#HandleLidSwitch=/ s/^#.*/HandleLidSwitch=lock/" /etc/systemd/logind.conf
 
+# Configure Locale Settings
+dbus-send --print-reply --system --dest=org.freedesktop.Accounts /org/freedesktop/Accounts/User$UID org.freedesktop.Accounts.User.SetFormatsLocale string:'en_GB.UTF-8'
+sudo sed -i.bak "/LC_/ s/=.*/=en_GB.UTF-8/" /etc/default/locale
+gsettings set org.gnome.system.locale region 'en_GB.UTF-8'
+
 # Debloate System
 sudo apt purge gnome-characters gnome-font-viewer gnome-logs rhythmbox seahorse totem ubuntu-desktop yelp -y
 sudo apt auto-remove -y
